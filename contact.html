@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Moritz Schmitz</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+        section {
+            border: 1px dashed #aaa;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Contact Me</h1>
@@ -18,29 +27,50 @@
         </nav>
     </header>
     <main>
-        <h2>Get in Touch</h2>
-        <p>Please fill out the form below to contact me.</p>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Please fill out the form below to contact me.</p>
 
-        <form action="#" method="POST">
-            <fieldset>
-                <legend>Contact Form</legend>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Contact Form</legend>
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required><br><br>
 
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject"><br><br>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject"><br><br>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" cols="40" required></textarea>
-            </fieldset>
-        </form>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+
+                    <button type="submit">Send Message</button>
+                </fieldset>
+            </form>
+            <dialog open>
+                <p>Thank you for reaching out! Your message has been received.</p>
+                <p><small>(In future versions, this dialog could open when clicking the &quot;Send Message&quot; button.)</small></p>
+            </dialog>
+        </section>
+
+        <section>
+            <h2>Find Me</h2>
+            <p>Here’s a map of my general area (San Diego):</p>
+            <iframe src="https://www.google.com/maps?q=San+Diego,+CA&output=embed" width="400" height="300"
+                style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Google Map of San Diego, California">
+            </iframe>
+        </section>
     </main>
     <footer>
         <p>&copy; Website by Moritz Schmitz</p>
+        <noscript>
+            <p>JavaScript is disabled. You will eventually experience missing functionality.</p>
+        </noscript>
     </footer>
 </body>
+
 </html>

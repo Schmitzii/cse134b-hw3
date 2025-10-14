@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Moritz Schmitz</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+        section {
+            border: 1px dashed #aaa;
+        }
+    </style>
 </head>
+
+<hello-world></hello-world>
+
+<script>
+    class HelloWorld extends HTMLElement {
+        constructor() {
+            super();
+        }
+
+        connectedCallback() {
+            console.log("Hello world!");
+        }
+    }
+
+    customElements.define("hello-world", HelloWorld);
+</script>
+
 <body>
     <header>
         <h1>Moritz Schmitz</h1>
@@ -20,19 +45,27 @@
     <main>
         <section>
             <h2>About Me</h2>
-            <p>Hello! I'm <strong>Moritz</strong>, a student learning web development in CSE134B at UCSD.
-            This website is my <em>HTML-only portfolio</em> for class. It focuses on structure, not style, to demonstrate semantic HTML.</p>
-            <picture>
-                <source srcset="profile-large.jpeg" media="(min-width: 800px)">
-                <source srcset="profile-medium.jpeg" media="(min-width: 500px)">
-                <img src="profile-small.jpeg" alt="Portrait of Moritz Schmitz" width="200">
-            </picture>
-            <br>
-            <p>I love building projects and learning new technologies.</p>
+            <div>
+                <p>Hello! I'm <span class="highlight">Moritz</span>, a student learning web development in CSE134B at
+                    UCSD.
+                    This website is my <em>HTML-only portfolio</em> for class. It focuses on structure, not style, to
+                    demonstrate semantic HTML.</p>
+                <picture>
+                    <source srcset="profile-large.jpeg" media="(min-width: 800px)">
+                    <source srcset="profile-medium.jpeg" media="(min-width: 500px)">
+                    <img src="profile-small.jpeg" alt="Portrait of Moritz Schmitz" width="200">
+                </picture>
+                <br>
+                <p>I love <i>building projects</i> and <i>learning new technologies.</i></p>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; Website by Moritz Schmitz</p>
+        <noscript>
+            <p>JavaScript is disabled. You will eventually experience missing functionality.</p>
+        </noscript>
     </footer>
 </body>
+
 </html>

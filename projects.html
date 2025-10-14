@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Moritz Schmitz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <style>
+        project-card {
+            display: block;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: #fafafa;
+            max-width: 400px;
+        }
+
+        project-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        project-card h3 {
+            margin-top: 0.5rem;
+        }
+
+        project-card p {
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        project-card a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            color: #0044cc;
+        }
+        
+        section {
+            border: 1px dashed #aaa;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Projects</h1>
@@ -23,30 +63,58 @@
             <h2>Coming soon</h2>
             <p>As I continue learning web development, this page will grow to include real projects.</p>
         </section>
-        <project-card>
-            <img src ="https://placehold.co/300x200" width="300"> 
-            <h3>Sample Project 1: Personal Portfolio</h3>
-            <p>This project is currently in work and will be further developed in HW 3</p>
-            <p>Project Stage: <progress max="100.00" value="50.00"></progress></p>
-            <a href="https://famous-marshmallow-b3061e.netlify.app">Visit</a>
-        </project-card>
-        <project-card>
-            <img src ="https://placehold.co/300x200" width="300"> 
-            <h3>Sample Project 2: Future JavaScript Web App</h3>
-            <p><i>Planned for future.</i></p>
-            <p>Project Stage: <progress max="100.00" value="10.00"></progress></p>
-            <a href="https://famous-marshmallow-b3061e.netlify.app">Visit</a>
-        </project-card>
-        <project-card>
-            <img src ="https://placehold.co/300x200" width="300"> 
-            <h3>Sample Project 3: Online Shop</h3>
-            <p><i>Planned for future.</i></p>
-            <p>Project Stage: <progress max="100.00" value="20.00"></progress></p>
-            <a href="https://famous-marshmallow-b3061e.netlify.app">Visit</a>
-        </project-card>
+
+        <section>
+            <project-card>
+                <img src="https://placehold.co/300x200" width="300">
+                <h3>Sample Project 1: Personal Portfolio</h3>
+                <p>This project is currently in work and will be further developed in HW 3</p>
+                <p>Project Stage: <progress max="100.00" value="50.00"></progress></p>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="10" fill="green" />
+                </svg><br>
+                <a href="https://famous-marshmallow-b3061e.netlify.app">Visit</a>
+            </project-card>
+            <project-card>
+                <img src="https://placehold.co/300x200" width="300">
+                <h3>Sample Project 2: Future JavaScript Web App</h3>
+                <p><i>Planned for future.</i></p>
+                <p>Project Stage: <progress max="100.00" value="10.00"></progress></p>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="10" fill="orange" />
+                </svg><br>
+                <a href="https://famous-marshmallow-b3061e.netlify.app">Visit</a>
+            </project-card>
+            <project-card>
+                <img src="https://placehold.co/300x200" width="300">
+                <h3>Sample Project 3: Online Shop</h3>
+                <p><i>Planned for future.</i></p>
+                <p>Project Stage: <progress max="100.00" value="20.00"></progress></p>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="10" fill="red" />
+                </svg><br>
+                <a href="https://famous-marshmallow-b3061e.netlify.app">Visit</a>
+            </project-card>
+        </section>
+
+        <section>
+            <h2>My Project Workflow</h2>
+            <p>Every time I start a new project, I follow these steps:</p>
+            <ol>
+                <li>Plan the goal and features.</li>
+                <li>Create a wireframe or sketch of the layout.</li>
+                <li>Build the basic structure with HTML.</li>
+                <li>Style and make it responsive with CSS.</li>
+                <li>Refine, test, and publish the project.</li>
+            </ol>
+        </section>
     </main>
     <footer>
         <p>&copy; Website by Moritz Schmitz</p>
+        <noscript>
+            <p>JavaScript is disabled. You will eventually experience missing functionality.</p>
+        </noscript>
     </footer>
 </body>
+
 </html>
