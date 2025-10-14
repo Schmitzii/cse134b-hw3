@@ -12,23 +12,23 @@
             border: 1px dashed #aaa;
         }
     </style>
+
+    <script>
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+            }
+
+            connectedCallback() {
+                console.log("Hello world!");
+            }
+        }
+
+        customElements.define("hello-world", HelloWorld);
+    </script>
 </head>
 
 <hello-world></hello-world>
-
-<script>
-    class HelloWorld extends HTMLElement {
-        constructor() {
-            super();
-        }
-
-        connectedCallback() {
-            console.log("Hello world!");
-        }
-    }
-
-    customElements.define("hello-world", HelloWorld);
-</script>
 
 <body>
     <header>
