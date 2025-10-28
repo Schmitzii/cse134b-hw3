@@ -6,13 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Moritz Schmitz</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="main.css" media="screen", type="text/css">
-
-    <style>
-        section {
-            border: 1px dashed #aaa;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css" media="screen" , type="text/css">
 </head>
 
 <body>
@@ -28,42 +22,38 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section id="contact-section">
             <h2>Get in Touch</h2>
             <p>Please fill out the form below to contact me.</p>
 
-            <form action="#" method="POST">
+            <form class="contact-form" action="#" method="POST">
                 <fieldset>
                     <legend>Contact Form</legend>
 
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" required><br><br>
+                    <input type="email" id="email" placeholder="Your Email" required><br><br>
 
                     <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject"><br><br>
+                    <input type="text" id="subject" name="subject" placeholder="What's your matter?" required><br><br>
 
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="Your message..."
+                        required></textarea><br><br>
 
-                    <button type="submit">Send Message</button>
+                    <button class="submit-button" type="submit">Submit</button>
                 </fieldset>
             </form>
-            <dialog open>
-                <p>Thank you for reaching out! Your message has been received.</p>
-                <p><small>(In future versions, this dialog could open when clicking the &quot;Send Message&quot; button.)</small></p>
-            </dialog>
+
         </section>
 
         <section>
             <h2>Find Me</h2>
-            <p>Here’s a map of my general area (San Diego):</p>
-            <iframe src="https://www.google.com/maps?q=San+Diego,+CA&output=embed" width="400" height="300"
-                style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="Google Map of San Diego, California">
-            </iframe>
+            <p>You can find me here</p>
+            <iframe src="https://maps.google.com/maps?q=32.88116, -117.237651&z=15&output=embed" width="360"
+                height="270" frameborder="0" style="border:0"></iframe>
         </section>
     </main>
     <footer>

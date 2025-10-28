@@ -6,13 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Moritz Schmitz</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="main.css" media="screen", type="text/css">
-
-    <style>
-        section {
-            border: 1px dashed #aaa;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 
     <script>
         class HelloWorld extends HTMLElement {
@@ -33,7 +27,7 @@
 
 <body>
     <header>
-        <h1>Moritz Schmitz</h1>
+        <h1><span class="first-letter">M</span>oritz <span class="first-letter">S</span>chmitz</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -44,20 +38,18 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>About Me</h2>
-            <div>
-                <p>Hello! I'm <span class="highlight">Moritz</span>, a student learning web development in CSE134B at
-                    UCSD.
-                    This website is my <em>HTML-only portfolio</em> for class. It focuses on structure, not style, to
-                    demonstrate semantic HTML.</p>
+        <section class="about-section">
+            <h2 class="about-heading">About Me</h2>
+            <div class="about-body">
                 <picture>
                     <source srcset="assets/images/profile-large.jpeg" media="(min-width: 800px)">
                     <source srcset="assets/images/profile-medium.jpeg" media="(min-width: 500px)">
-                    <img src="assets/images/profile-small.jpeg" alt="Portrait of Moritz Schmitz" width="200">
+                    <img class="profile-img" src="assets/images/profile-small.jpeg" alt="Portrait of Moritz Schmitz"
+                        width="200">
                 </picture>
-                <br>
-                <p>I love <i>building projects</i> and <i>learning new technologies.</i></p>
+                <p>Hey there! I’m Moritz — a <em>student at UCSD</em> who is eagerly learning <em>Web Dev</em> in <em>CSE134B</em>.
+                    Dive in and see how design and code come alive when curiosity leads the way.</p>
+
             </div>
         </section>
     </main>
