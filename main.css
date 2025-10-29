@@ -13,7 +13,7 @@
   src: url('assets/fonts/Lexend-VariableFont_wght.ttf');
 }
 
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
 h1, h2, h3{
     font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,10 +44,6 @@ section > *{
     margin: 1em 0;
 }
 
-p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 em{
     color: var(--secondary-color);
     font-style: normal;
@@ -65,8 +61,15 @@ nav ul{
     padding: 0;
 }
 
+@media (max-width: 500px) {
+    nav ul{
+        display: block;
+        text-align: center;
+    }
+}
+
 nav ul li{
-    margin: 0 var(--default-margin) 0;
+    margin: 0 4dvw;
 }
 
 nav ul li a {
@@ -102,6 +105,17 @@ nav ul li a:hover::before,a:focus::before {
     gap: 1em
 }
 
+@media (max-width: 500px) {
+    .about-body{
+        display: block;
+        text-align: center;
+    }
+
+    .about-body p{
+        text-align: justify;
+    }
+}
+
 .profile-img{
     border-radius: 50%;
     margin: 0;
@@ -128,6 +142,7 @@ form legend{
 }
 
 form input, form textarea{
+    box-sizing: border-box;
     display: block;
     padding: 0.7em;
     margin-top: 0.2em;
@@ -135,6 +150,16 @@ form input, form textarea{
     border-radius: var(--default-border-radius); 
     transition: 300ms;
     font-family: inherit;
+}
+
+form input{
+    width: 20em
+}
+
+@media (max-width: 500px) {
+    form input, form textarea{
+        width: 60dvw
+    }
 }
 
 form input:focus, form textarea:focus{
@@ -159,6 +184,8 @@ button:hover{
 
 iframe{
     border-radius: var(--default-border-radius);
-    border: none;   
+    border: none; 
+    width: 60dvw;
+    height: 20em
 }
 
