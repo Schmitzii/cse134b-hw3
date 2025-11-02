@@ -8,6 +8,8 @@
     --dark-color: #353535;
     --light-color: #d9d9d9;
     --default-font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --timestamp-color1: rgb(60 110 113);
+    --timestamp-color2: rgb(49 90 92);
 }
 
 @font-face {
@@ -40,16 +42,16 @@ h2 {
 }
 
 main {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .first-letter {
@@ -138,7 +140,7 @@ a:focus::before {
 }
 
 .about-body p {
-        text-align: justify;
+    text-align: justify;
 }
 
 @media (max-width: 500px) {
@@ -177,8 +179,8 @@ project-card {
 }
 
 project-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 project-card img {
@@ -195,7 +197,7 @@ project-card p {
     color: #333;
 }
 
-progress{
+progress {
     display: block;
 }
 
@@ -231,7 +233,7 @@ form textarea {
     width: 60dvw
 }
 
-form input{
+form input {
     max-width: 35em;
 }
 
@@ -308,7 +310,8 @@ ol {
 
 #timestamp1 {
     background:
-        linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
+        linear-gradient(rgb(from var(--timestamp-color1) r g b / 0.65),
+            rgb(from var(--timestamp-color1) r g b / 0.65)),
         image-set("assets/images/cologne-cathedral-small.webp" type("image/webp"),
             "assets/images/cologne-cathedral-small.jpeg" type("image/jpeg"));
     background-size: cover;
@@ -321,7 +324,8 @@ ol {
 
 #timestamp2 {
     background:
-        linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
+        linear-gradient(rgb(from var(--timestamp-color2) r g b / 0.8),
+            rgb(from var(--timestamp-color2) r g b / 0.8)),
         image-set("assets/images/abitur-small.webp" type("image/webp"),
             "assets/images/abitur-small.jpeg" type("image/jpeg"));
     background-size: cover;
@@ -334,7 +338,8 @@ ol {
 
 #timestamp3 {
     background:
-        linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
+        linear-gradient(rgb(from var(--timestamp-color1) r g b / 0.65),
+            rgb(from var(--timestamp-color1) r g b / 0.65)),
         image-set("assets/images/geisel-small.webp" type("image/webp"),
             "assets/images/geisel-small.jpeg" type("image/jpeg"));
     background-size: cover;
@@ -347,7 +352,8 @@ ol {
 
 #timestamp4 {
     background:
-        linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
+        linear-gradient(rgb(from var(--timestamp-color2) r g b / 0.8),
+            rgb(from var(--timestamp-color2) r g b / 0.8)),
         image-set("assets/images/geisel-small.webp" type("image/webp"),
             "assets/images/geisel-small.jpeg" type("image/jpeg"));
     background-size: cover;
@@ -361,7 +367,8 @@ ol {
 @media (min-width: 1000px) {
     #timestamp1 {
         background:
-            linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
+            linear-gradient(rgb(from var(--timestamp-color1) r g b / 0.65),
+            rgb(from var(--timestamp-color1) r g b / 0.65)),
             image-set("assets/images/cologne-cathedral.webp" type("image/webp"),
                 "assets/images/cologne-cathedral.jpeg" type("image/jpeg"));
         background-size: cover;
@@ -374,7 +381,8 @@ ol {
 
     #timestamp2 {
         background:
-            linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
+            linear-gradient(rgb(from var(--timestamp-color2) r g b / 0.8),
+            rgb(from var(--timestamp-color2) r g b / 0.8)),
             image-set("assets/images/abitur.webp" type("image/webp"),
                 "assets/images/abitur.jpeg" type("image/jpeg"));
         background-size: cover;
@@ -387,7 +395,8 @@ ol {
 
     #timestamp3 {
         background:
-            linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
+            linear-gradient(rgb(from var(--timestamp-color1) r g b / 0.65),
+            rgb(from var(--timestamp-color1) r g b / 0.65)),
             image-set("assets/images/geisel.webp" type("image/webp"),
                 "assets/images/geisel.jpeg" type("image/jpeg"));
         background-size: cover;
@@ -400,7 +409,8 @@ ol {
 
     #timestamp4 {
         background:
-            linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
+            linear-gradient(rgb(from var(--timestamp-color2) r g b / 0.8),
+            rgb(from var(--timestamp-color2) r g b / 0.8)),
             image-set("assets/images/geisel.webp" type("image/webp"),
                 "assets/images/geisel.jpeg" type("image/jpeg"));
         background-size: cover;
