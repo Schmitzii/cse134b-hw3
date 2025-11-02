@@ -1,12 +1,13 @@
 :root {
-    --default-margin: 2.5em;
+    --default-margin: 2em;
+    --default-section-margin: 1em 0;
     --default-padding: 1em;
     --default-border-radius: 1.5em;
     --primary-color: #284b63;
     --secondary-color: #3c6e71;
     --dark-color: #353535;
     --light-color: #d9d9d9;
-    --light-color-transparent: rgb(217, 217, 217, 0.5);
+    --default-font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @font-face {
@@ -23,7 +24,7 @@
 h1,
 h2,
 h3 {
-    font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--default-font-family, sans-serif);
     font-weight: normal
 }
 
@@ -34,7 +35,7 @@ h1 {
 
 h2 {
     text-decoration: underline;
-    text-decoration-color: var(--secondary-color);
+    text-decoration-color: var(--secondary-color, black);
     text-decoration-thickness: 0.15em;
 }
 
@@ -53,7 +54,7 @@ section {
 }
 
 section>* {
-    margin: 1em 0;
+    margin: var(--default-section-margin);
 }
 
 a {
@@ -61,7 +62,7 @@ a {
 }
 
 em {
-    color: var(--secondary-color);
+    color: var(--secondary-color, black);
     font-style: normal;
 }
 
@@ -104,7 +105,7 @@ nav ul li a::before {
     height: 3px;
     content: "";
     position: absolute;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color, black);
     width: 100%;
     bottom: 5px;
     opacity: 0;
@@ -123,14 +124,14 @@ a:focus::before {
     gap: 1em
 }
 
+.about-body p {
+        text-align: justify;
+}
+
 @media (max-width: 500px) {
     .about-body {
         display: block;
         text-align: center;
-    }
-
-    .about-body p {
-        text-align: justify;
     }
 }
 
@@ -175,6 +176,10 @@ project-card p {
     color: #333;
 }
 
+progress{
+    display: block;
+}
+
 fieldset {
     padding: var(--default-padding);
     border: none;
@@ -182,7 +187,7 @@ fieldset {
 }
 
 form {
-    font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--default-font-family, sans-serif);
     font-size: 0.8em;
 }
 
@@ -202,37 +207,34 @@ form textarea {
     font-family: inherit;
 }
 
-form input {
-    width: 20em
+form input,
+form textarea {
+    width: 60dvw
 }
 
-@media (max-width: 500px) {
-
-    form input,
-    form textarea {
-        width: 60dvw
-    }
+form input{
+    max-width: 35em;
 }
 
 form input:focus,
 form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--secondary-color)
+    border-color: var(--primary-color, black);
+    box-shadow: 0 0 5px var(--secondary-color, black)
 }
 
 button {
     padding: 1em 3em;
     border-radius: var(--default-border-radius);
     border: none;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color, black);
     color: white;
     font-size: 1.1em;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color, black);
 }
 
 iframe {
@@ -243,7 +245,7 @@ iframe {
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--secondary-color, black);
     text-decoration: underline;
 }
 
@@ -263,7 +265,7 @@ ol {
     display: flex;
 }
 
-@media (max-width: 750px){
+@media (max-width: 750px) {
     #journey {
         flex-direction: column;
     }
@@ -283,10 +285,11 @@ ol {
     color: white;
 }
 
-#timestamp1{
+#timestamp1 {
     background:
         linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
-        url('assets/images/cologne-cathedral.jpeg');
+        image-set("assets/images/cologne-cathedral-small.webp" type("image/webp"),
+            "assets/images/cologne-cathedral-small.jpeg" type("image/jpeg"));
     background-size: cover;
     /* makes it fill the box */
     background-position: center;
@@ -295,10 +298,11 @@ ol {
     /* avoids tiling */
 }
 
-#timestamp2{
+#timestamp2 {
     background:
         linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
-        url('assets/images/abitur.jpeg');
+        image-set("assets/images/abitur-small.webp" type("image/webp"),
+            "assets/images/abitur-small.jpeg" type("image/jpeg"));
     background-size: cover;
     /* makes it fill the box */
     background-position: center;
@@ -307,10 +311,11 @@ ol {
     /* avoids tiling */
 }
 
-#timestamp3{
+#timestamp3 {
     background:
         linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
-        url('assets/images/geisel.jpg');
+        image-set("assets/images/geisel-small.webp" type("image/webp"),
+            "assets/images/geisel-small.jpeg" type("image/jpeg"));
     background-size: cover;
     /* makes it fill the box */
     background-position: center;
@@ -319,10 +324,11 @@ ol {
     /* avoids tiling */
 }
 
-#timestamp4{
+#timestamp4 {
     background:
         linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
-        url('assets/images/geisel.jpg');
+        image-set("assets/images/geisel-small.webp" type("image/webp"),
+            "assets/images/geisel-small.jpeg" type("image/jpeg"));
     background-size: cover;
     /* makes it fill the box */
     background-position: center;
@@ -331,12 +337,65 @@ ol {
     /* avoids tiling */
 }
 
+@media (min-width: 1000px) {
+    #timestamp1 {
+        background:
+            linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
+            image-set("assets/images/cologne-cathedral.webp" type("image/webp"),
+                "assets/images/cologne-cathedral.jpeg" type("image/jpeg"));
+        background-size: cover;
+        /* makes it fill the box */
+        background-position: center;
+        /* centers the image */
+        background-repeat: no-repeat;
+        /* avoids tiling */
+    }
 
-.timestamp > *{
+    #timestamp2 {
+        background:
+            linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
+            image-set("assets/images/abitur.webp" type("image/webp"),
+                "assets/images/abitur.jpeg" type("image/jpeg"));
+        background-size: cover;
+        /* makes it fill the box */
+        background-position: center;
+        /* centers the image */
+        background-repeat: no-repeat;
+        /* avoids tiling */
+    }
+
+    #timestamp3 {
+        background:
+            linear-gradient(rgba(60, 110, 113, 0.65), rgba(60, 110, 113, 0.65)),
+            image-set("assets/images/geisel.webp" type("image/webp"),
+                "assets/images/geisel.jpeg" type("image/jpeg"));
+        background-size: cover;
+        /* makes it fill the box */
+        background-position: center;
+        /* centers the image */
+        background-repeat: no-repeat;
+        /* avoids tiling */
+    }
+
+    #timestamp4 {
+        background:
+            linear-gradient(rgba(49, 90, 92, 0.8), rgba(49, 90, 92, 0.8)),
+            image-set("assets/images/geisel.webp" type("image/webp"),
+                "assets/images/geisel.jpeg" type("image/jpeg"));
+        background-size: cover;
+        /* makes it fill the box */
+        background-position: center;
+        /* centers the image */
+        background-repeat: no-repeat;
+        /* avoids tiling */
+    }
+}
+
+.timestamp>* {
     margin: 0.7em 0;
 }
 
-.timestamp h3{
+.timestamp h3 {
     font-size: 2em;
     border-top: 1px white solid;
     border-bottom: 1px white solid;
